@@ -1,0 +1,146 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #00ff00;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ff00;
+    position: relative;
+    z-index: 1;
+}
+
+/* العناوين */
+h1, h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 5px #00ff00;
+}
+
+/* الحقول */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* مسافة بين الحقول */
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%; /* النص على طول الحقل */
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background-color: #000;
+    color: #00ff00;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #00b300;
+    box-shadow: 0 0 10px #00b300;
+}
+
+/* الأزرار */
+button {
+    width: 100%;
+    max-width: 350px;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #00b300;
+    transform: scale(1.1);
+}
+
+/* الروابط */
+a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #00b300;
+}
+
+/* تحسين التصميم للأجهزة المختلفة */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    button, input, textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 30px;
+    }
+
+    h1, h2 {
+        font-size: 2.5rem;
+    }
+
+    button, input, textarea {
+        font-size: 1.2rem;
+    }
+}
