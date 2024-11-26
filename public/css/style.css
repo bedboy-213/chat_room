@@ -1,0 +1,306 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a; /* اللون الأسود */
+  color: #fff; /* النص باللون الأبيض */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #2b2b2b; /* خلفية داكنة */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: #28a745; /* اللون الأخضر */
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background-color: #ff1a1a;
+}
+
+.chat-box {
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #333; /* خلفية داكنة للرسائل */
+  border-bottom: 1px solid #444;
+}
+
+.message {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+strong.sender {
+  color: #ff0000; /* اللون الأحمر لاسم المرسل */
+}
+
+.no-messages {
+  text-align: center;
+  font-size: 16px;
+  color: #888; /* لون رمادي للنص عند عدم وجود رسائل */
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background-color: #444; /* خلفية داكنة للحقل */
+  border-top: 1px solid #555;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  background-color: #333; /* خلفية داكنة للحقل */
+  color: white;
+}
+
+.chat-input button {
+  background-color: #28a745; /* اللون الأخضر */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #218838; /* لون أخضر أغمق عند التمرير */
+}
+/* تنسيقات صفحة الدردشة */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.chat-box {
+  width: 100%;
+  height: 400px;
+  border: 1px solid #ddd;
+  overflow-y: scroll;
+  padding: 10px;
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.chat-input {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #45a049;
+}
+
+.messages .message {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+}
+
+.messages .message strong {
+  color: #4CAF50;
+}
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #00ff00;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* تأثير الماتريكس */
+#matrix-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: black;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ff00;
+    text-align: center;
+}
+
+/* العناوين */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 5px #00ff00;
+}
+
+/* النماذج */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* مسافة بين الحقول */
+}
+
+label {
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+    color: #00ff00;
+}
+
+input, button {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background-color: #000;
+    color: #00ff00;
+    font-size: 1rem;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00b300;
+    box-shadow: 0 0 10px #00b300;
+}
+
+/* الأزرار */
+button {
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00b300;
+    transform: scale(1.1);
+}
+
+/* الروابط */
+a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #00b300;
+}
+
+/* تحسين التصميم للأجهزة المختلفة */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+    }
+}
